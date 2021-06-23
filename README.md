@@ -1,1 +1,1 @@
-# atari_breakout_DQN
+# Atari Breakout with Deep Reinforcement Learning
