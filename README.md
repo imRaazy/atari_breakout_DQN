@@ -6,14 +6,17 @@ To install this project you need to clone the repository and install the require
 
 ## Usage ##
 Each DQN version is implemented in a different notebook:
--[./BreakoutDQN.ipynb]
--[./BreakoutDoubleDQN.ipynb]
--[./BreakoutDuellingDQN.ipynb]
--[./BreakoutPRBDQN.ipynb]
+-[BreakoutDQN.ipynb](BreakoutDQN.ipynb) - Vanilla DQN
+-[BreakoutDoubleDQN.ipynb](BreakoutDoubleDQN.ipynb) - Double DQN
+-[BreakoutDuellingDQN.ipynb](BreakoutDuellingDQN.ipynb) - Duelling DQN
+-[BreakoutPRBDQN.ipynb](BreakoutPRBDQN.ipynb) - Vanilla DQN with prioritized replay buffer
 
 In order to try one of the algorithms is enough to open the desired one, optionally define a custom name and directory where to save the model, and run the notebook.
 Example:
 ```
 save_models_and_data("name", "folder_name", DQN_model, DQN_model_target, tdm.get_arpe(), tdm.get_aav())
 ```
-will save the trained models as following: models/"folder_name"/model_"name" and models/"folder_name"/model_target_"name" 
+will save the trained models as following: models/"folder_name"/model_"name" and models/"folder_name"/model_target_"name".
+
+## Evaluation ##
+In [Evalutaion.ipynb](Evalutaion.ipynb) is possible to see a comparison between the different approaches. The first plot shows the collected data during training in terms of Average Reward per Episode and Average Action Value for each model. The second one shows the Average Reward per Episode obtained by all the different models over 30 games.
