@@ -6,10 +6,10 @@ To install this project you need to clone the repository and install the require
 
 ## Usage ##
 Each DQN version is implemented in a different notebook:
--[BreakoutDQN.ipynb](BreakoutDQN.ipynb) - Vanilla DQN
--[BreakoutDoubleDQN.ipynb](BreakoutDoubleDQN.ipynb) - Double DQN
--[BreakoutDuellingDQN.ipynb](BreakoutDuellingDQN.ipynb) - Duelling DQN
--[BreakoutPRBDQN.ipynb](BreakoutPRBDQN.ipynb) - Vanilla DQN with prioritized replay buffer
+- [BreakoutDQN.ipynb](BreakoutDQN.ipynb) -> Vanilla DQN
+- [BreakoutDoubleDQN.ipynb](BreakoutDoubleDQN.ipynb) -> Double DQN
+- [BreakoutDuellingDQN.ipynb](BreakoutDuellingDQN.ipynb) -> Duelling DQN
+- [BreakoutPRBDQN.ipynb](BreakoutPRBDQN.ipynb) -> Vanilla DQN with prioritized replay buffer
 
 In order to try one of the algorithms is enough to open the desired one, optionally define a custom name and directory where to save the model, and run the notebook.
 Example:
