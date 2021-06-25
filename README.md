@@ -2,7 +2,10 @@
 The purpose of this project is to implement an autonomous agent capable of playing Atari Breakout through Deep Reinforcement Learning. The algorithms chosen to build the agent are Deep Q-Learning and its improvements, in particular Double DQN, Duelling DQN and the classic DQN but with prioritized experience replay buffer.
 
 ## Installation ##
-To install this project you need to clone the repository and install the requiremens written in requirements.txt
+To install this project you need to clone the repository and install the requiremens written in requirements.txt.
+```
+pip3 install -r requirements.txt
+```
 
 ## Usage ##
 Each DQN version is implemented in a different notebook:
