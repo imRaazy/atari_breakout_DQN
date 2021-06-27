@@ -4,7 +4,7 @@ The purpose of this project is to implement an autonomous agent capable of playi
 ## Installation ##
 To install this project you need to clone the repository and install the requiremens written in requirements.txt.
 ```
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ## Usage ##
@@ -22,4 +22,4 @@ save_models_and_data("name", "folder_name", DQN_model, DQN_model_target, tdm.get
 will save the trained models as following: models/"folder_name"/model_"name" and models/"folder_name"/model_target_"name".
 
 ## Evaluation ##
-In [Evalutaion.ipynb](Evalutaion.ipynb) is possible to see a comparison between the different approaches. The first plot shows the collected data during training in terms of Average Reward per Episode and Average Action Value for each model. The second one shows the Average Reward per Episode obtained by testing all the different models over 30 games.
+In [Evaluation.ipynb](Evalutaion.ipynb) is possible to see a comparison between the different approaches. The first plot shows the collected data during training in terms of Average Reward per Episode and Average Action Value for each model. The second one shows the Average Reward per Episode obtained by testing all the different models over 30 games.
