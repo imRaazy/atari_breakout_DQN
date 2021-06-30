@@ -1,5 +1,5 @@
 # Atari Breakout with Deep Reinforcement Learning
-The purpose of this project is to implement an autonomous agent capable of playing Atari Breakout through Deep Reinforcement Learning. The algorithms chosen to build the agent are Deep Q-Learning and its improvements, which are in particular Double DQN, Duelling DQN and the classic DQN but with prioritized experience replay buffer.
+The purpose of this project is to implement an autonomous agent capable of playing Atari Breakout through Deep Reinforcement Learning. The algorithms chosen to build the agent are Deep Q-Learning and its improvements, which are in particular Double DQN, Duelling DQN and Double DQN but with prioritized experience replay buffer.
 
 ## Installation ##
 To install this project you need to clone the repository and install the requiremens written in requirements.txt.
@@ -12,7 +12,7 @@ Each DQN version is implemented in a different notebook:
 - [BreakoutDQN.ipynb](BreakoutDQN.ipynb) -> Vanilla DQN
 - [BreakoutDoubleDQN.ipynb](BreakoutDoubleDQN.ipynb) -> Double DQN
 - [BreakoutDuellingDQN.ipynb](BreakoutDuellingDQN.ipynb) -> Duelling DQN
-- [BreakoutPRBDQN.ipynb](BreakoutPRBDQN.ipynb) -> Vanilla DQN with prioritized replay buffer
+- [BreakoutPRBDQN.ipynb](BreakoutPRBDQN.ipynb) -> Double DQN with prioritized replay buffer
 
 In order to try one of the algorithms is enough to open the desired one, optionally define a custom name and directory where to save the model, and run the notebook.
 
