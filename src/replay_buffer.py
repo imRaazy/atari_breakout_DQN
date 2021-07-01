@@ -35,7 +35,6 @@ class PrioritizedReplayBuffer(ReplayBuffer):
     self.max_priority = 1.0 + self.epsilon
     self.alpha_priorities_sum = .0
     self.last_sampled_experiences = np.array([])
-    self.is_weigths = np.array([])
 
   def add(self, args_list):
     if len(self.replay_buffer) == self.memory_length:
@@ -55,15 +54,15 @@ class PrioritizedReplayBuffer(ReplayBuffer):
     self.last_sampled_experiences = np.asarray(random.choices(range(len(self.replay_buffer)), 
                                                               weights=[el[self.PROB] for el in self.replay_buffer], 
                                                               k=self.batch_size))
-    last_sampled_prob = np.asarray([self.replay_buffer[index][self.PROB] for index in self.last_sampled_experiences])
-    self.is_weights = np.power(len(self.replay_buffer) * last_sampled_prob, -self.beta)
-    self.is_weights /= max(self.is_weights)
     
   def sample_experiences(self):
     if self.last_sampled_experiences.size == 0:
       self.update_sample()
     states, actions, rewards, next_states, dones = ReplayBuffer.sample_experiences(self, self.last_sampled_experiences)
-    return states, actions, rewards, next_states, dones, self.is_weights
+    last_sampled_prob = np.asarray([self.replay_buffer[index][self.PROB] for index in self.last_sampled_experiences])
+    is_weights = np.power(len(self.replay_buffer) * last_sampled_prob, -self.beta)
+    is_weights /= max(is_weights)
+    return states, actions, rewards, next_states, dones, is_weights
 
   def update_prio(self, tds):
     for k, i in zip(self.last_sampled_experiences, range(self.batch_size)):
